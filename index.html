@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini To-Do</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <p class="eyebrow">Today</p>
+      <h1>My tasks</h1>
+      <p class="subtitle">Add what you need to do. Your list stays in this browser.</p>
+    </header>
+
+    <!-- Form for adding a new task -->
+    <form id="task-form" class="task-form">
+      <label class="visually-hidden" for="task-input">New task</label>
+      <input
+        id="task-input"
+        type="text"
+        placeholder="What needs doing?"
+        maxlength="140"
+        autocomplete="off"
+        required
+      >
+      <button type="submit">Add</button>
+    </form>
+
+    <p id="task-count" class="task-count" aria-live="polite">No tasks yet</p>
+
+    <!-- Tasks are drawn here by script.js -->
+    <ul id="task-list" class="task-list"></ul>
+
+    <p id="empty-state" class="empty-state">Nothing on the list. Add a task above.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
